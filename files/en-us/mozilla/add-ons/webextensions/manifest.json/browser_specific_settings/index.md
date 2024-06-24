@@ -72,6 +72,9 @@ The `gecko_android` subkey supports these properties:
 - `strict_max_version`
   - : Maximum version of Gecko to support on Android. If the Firefox version on which the extension is being installed or run is above this version, the extension is not installed or not run. Defaults to the version determined by `gecko.strict_max_version`.
 
+To support android browser without any strict version range you still need to define it as empty object:
+`"gecko_android": {}`, otherwise it will only be available on desktop firefox.
+
 See the list of [valid Gecko versions](https://addons.mozilla.org/api/v5/applications/firefox/).
 
 #### Extension ID format
